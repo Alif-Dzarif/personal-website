@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.button {
+  position: relative;
+  background-color: transparent;
+  font-family: "montserrat", sans-serif;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  min-width: 180px;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: left center;
+}
+
+.button-fill::before {
+  transform: scaleX(0);
+}
+
+.button-fill:hover::before {
+  transform: scaleX(1);
+}
+
+.emoji {
+  animation: waving-hand 2.5s infinite;
+  transform-origin: 70% 70%;
+  transform: perspective(0);
+}
+
+.side__pages {
+  transition: transform 0.6s ease-in;
+}
+
+.swiper_container {
+  height: 40rem;
+  padding: 7rem 0;
+  position: relative;
+}
+
+.swiper-slide {
+  width: 37rem;
+  height: 19rem;
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 37rem;
+  height: 19rem;
+  border-radius: 3rem 0rem;
+  object-fit: contain;
+}
+
+.slider-controler {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-controler .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+.slider-controler .slider-arrow {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.slider-controler .slider-arrow::after {
+  content: '';
+}
+
+.swiper-pagination {
+  position: relative;
+  width: 10rem !important;
+  bottom: 1rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+@keyframes waving-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
