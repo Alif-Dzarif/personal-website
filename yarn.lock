@@ -2143,11 +2143,6 @@
   dependencies:
     "loose-envify" "^1.1.0"
 
-"scrollprogress@^3.0.2":
-  "integrity" "sha512-264U+Xg/nGydLAJKb1a1FQ+FUQ4Tlvyt5Ayt247wj4hRo1cB5nwQDP3H8UXq90G4IMm8Q0HnPuxLPzK+qy9w3g=="
-  "resolved" "https://registry.npmjs.org/scrollprogress/-/scrollprogress-3.0.2.tgz"
-  "version" "3.0.2"
-
 "semver@^6.3.1":
   "integrity" "sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"

@@ -2,7 +2,6 @@ import { scroller } from 'react-scroll'
 import { useEffect, useState } from 'react'
 import { Typewriter } from 'react-simple-typewriter'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ScrollProgress from 'scrollprogress'
 
 import { faAnglesUp, faAnglesDown } from '@fortawesome/free-solid-svg-icons'
 
@@ -48,10 +47,6 @@ function App() {
     setButtonBorder('border-white');
   }
 
-  // const progressObserver = new ScrollProgress((x, y) => {
-  //   setWidth(Math.abs(Math.round(y * 100)), '%');
-  // })
-
   const timer = () => {
     let hour = new Date().getHours();
     setHour2(new Date().getHours());
@@ -73,7 +68,7 @@ function App() {
 
   const clickNext = () => {
     let newPages = pages;
-    if (newPages < 3) {
+    if (newPages < 4) {
       newPages += 1;
       setPages(newPages);
     }
@@ -96,6 +91,13 @@ function App() {
     }
     else if (pages === 3) {
       setPageSlide('-translate-y-[12.9rem]')
+      scroller.scrollTo('contribution', {
+        smooth: true,
+        duration: 400
+      })
+    }
+    else if (pages === 4) {
+      setPageSlide('-translate-y-[19.35rem]')
       scroller.scrollTo('contact', {
         smooth: true,
         duration: 400
@@ -125,7 +127,7 @@ function App() {
           <div onClick={clickPrev} className={`cursor-pointer w-10 h-10 ${pages === 1 ? 'text-slate-600' : ''}`}>
             <FontAwesomeIcon icon={faAnglesUp} size='2xl' className='' />
           </div>
-          <div onClick={clickNext} className={`cursor-pointer w-10 h-10 ${pages === 3 ? 'text-slate-600' : ''}`}>
+          <div onClick={clickNext} className={`cursor-pointer w-10 h-10 ${pages === 4 ? 'text-slate-600' : ''}`}>
             <FontAwesomeIcon icon={faAnglesDown} size='2xl' className='' />
           </div>
         </div>
@@ -134,11 +136,12 @@ function App() {
             <li className='h-20 my-6 flex items-center'>01</li>
             <li className='h-20 my-6 flex items-center'>02</li>
             <li className='h-20 my-6 flex items-center'>03</li>
+            <li className='h-20 my-6 flex items-center'>04</li>
           </ul>
         </div>
       </aside>
       <div className={`top-0 bottom-0 h-2 bg-black w-[]`}></div>
-      <div className='slide-down  h-screen py-44 px-16 flex justify-center border-b-2 border-white select-none' name='intro'>
+      <div className='slide-down  h-screen py-44 px-16 flex justify-center select-none' name='intro'>
         <div className='mt-36'>
           <h1 className=' text-6xl flex font-bold '>Hello <span className='mr-3 ml-3'><a href="https://emoji.gg/emoji/2084-heya"><img src="https://cdn3.emoji.gg/emojis/2084-heya.gif" width="50px" height="50px" alt="heya" /></a></span> I'm La Ode Abdul Dzarif Imaduddin</h1>
           <h1 className='text-3xl mt-5 font-medium'>I'm a
@@ -157,10 +160,16 @@ function App() {
         </div>
       </div>
       <ProjectCarousel textColor={textColor} className="slide-down" />
+      <div className='h-screen w-screen px-40 pt-32 pb-20' name='contribution'>
+        <h1 className={`text-center text-5xl font-bold ${textColor}`}>GITHUB CONTRIBUTION</h1>
+        <div className='px-52 mt-20'>
+          <h1 className={`text-2xl font-semibold ${textColor}`}>Github Username : Alif-Dzarif</h1>
+        </div>
+        <div className='w-full flex justify-center mt-10'>
+          <img src="https://ghchart.rshah.org/fe2f2f/alif-dzarif" alt="Alif-Dzarif Github chart" className='h-56 w-3/4' />
+        </div>
+      </div>
       <GetInTouch />
-      {/* <div className='slide-down h-screen' name='contact'>
-        <img src="https://ghchart.rshah.org/alif-dzarif" alt="2016rshah's Github chart" />
-      </div> */}
     </div>
   )
 }

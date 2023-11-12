@@ -34,7 +34,7 @@ export default function ProjectCarousel({ textColor }) {
   }, []);
 
   return (
-    <div className='h-screen w-screen border-b-2 border-white px-40 pt-32 pb-20' name='project'>
+    <div className='h-screen w-screen px-40 pt-32 pb-20' name='project'>
       <h1 className={`text-center text-5xl font-bold ${textColor}`}>PROJECTS</h1>
       <div className='flex items-center'>
         <Swiper
