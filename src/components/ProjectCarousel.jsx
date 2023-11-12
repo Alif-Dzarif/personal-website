@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react' 
+import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -11,15 +12,30 @@ import 'swiper/css/navigation'
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
 
-import slide__image1 from '../assets/images/Mon-Resto.png'
-import slide__image2 from '../assets/images/NYT-Clone.png'
-import slide__image3 from '../assets/images/KanbanZen-Client.png'
+import mon_resto from '../assets/images/Mon-Resto.png'
+import nyt_clone from '../assets/images/NYT-Clone.png'
+import kanbanzen_client from '../assets/images/KanbanZen-Client.png'
+import personal_website from '../assets/images/personal-website.png'
+import ubike from '../assets/images/UBike.png'
+import user_dummy from '../assets/images/user-dummy-API.png'
 
 
-export default function ProjectCarousel() {
+
+export default function ProjectCarousel({ textColor }) {
+  const [hour, setHour] = useState(new Date().getHours())
+
+  const timer = () => {
+    setHour(new Date().getHours())
+  }
+
+  useEffect(() => {
+    const intervalHour = setInterval(timer, 1000);
+    return () => clearInterval(intervalHour);
+  }, []);
+
   return (
     <div className='h-screen w-screen border-b-2 border-white px-40 pt-32 pb-20' name='project'>
-      <h1 className='text-center'>Projects</h1>
+      <h1 className={`text-center text-5xl font-bold ${textColor}`}>PROJECTS</h1>
       <div className='flex items-center'>
         <Swiper
           effect={'coverflow'}
@@ -43,26 +59,30 @@ export default function ProjectCarousel() {
           className="swiper_container"
         >
           <SwiperSlide>
-            <img src={slide__image1} alt="slide_image" />
+            <img src={mon_resto} onClick={() => window.open('https://github.com/Alif-Dzarif/Mon-Resto')} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide__image2} alt="slide_image" />
+            <img src={nyt_clone} onClick={() => window.open('https://github.com/Alif-Dzarif/NYT-Clone')} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide__image3} alt="slide_image" />
+            <img src={kanbanzen_client} onClick={() => window.open('https://github.com/Alif-Dzarif/KanbanZen-Client')} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide__image1} alt="slide_image" />
+            <img src={personal_website} onClick={() => window.open('https://github.com/Alif-Dzarif/personal-website')} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide__image2} alt="slide_image" />
+            <img src={ubike} onClick={() => window.open('https://github.com/UBike-rmt-38')} alt="slide_image" />
           </SwiperSlide>
+          <SwiperSlide>
+            <img src={user_dummy} onClick={() => window.open('https://github.com/Alif-Dzarif/user-dummy-API')} alt="slide_image" />
+          </SwiperSlide>
+          
 
           <div className="slider-controler">
-            <div className="swiper-button-prev slider-arrow">
+            <div className={`swiper-button-prev slider-arrow  ${hour < 6 || hour >= 18 ? 'text-white' : 'text-black'}`}>
               <FontAwesomeIcon icon={faCircleChevronLeft} />
             </div>
-            <div className="swiper-button-next slider-arrow">
+            <div className={`swiper-button-next slider-arrow ${hour < 6 || hour >= 18 ? 'text-white' : 'text-black'}`}>
               <FontAwesomeIcon icon={faCircleChevronRight} />
             </div>
             <div className="swiper-pagination"></div>
