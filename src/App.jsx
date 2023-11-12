@@ -7,6 +7,7 @@ import ScrollProgress from 'scrollprogress'
 import { faAnglesUp, faAnglesDown } from '@fortawesome/free-solid-svg-icons'
 
 import ProjectCarousel from './components/ProjectCarousel'
+import GetInTouch from './components/GetInTouch'
 
 
 function App() {
@@ -48,26 +49,18 @@ function App() {
   }
 
   // const progressObserver = new ScrollProgress((x, y) => {
-  //   console.log(Math.floor(y * 100), '%');
+  //   setWidth(Math.abs(Math.round(y * 100)), '%');
   // })
 
   const timer = () => {
-    try {
-      let hour = new Date().getHours();
-      setHour2(new Date().getHours());
+    let hour = new Date().getHours();
+    setHour2(new Date().getHours());
 
-      if (hour < 4 || hour >= 19) night();
-      else if (hour < 6) morning();
-      else if (hour < 16) day()
-      else if (hour < 18) afternoon()
-      else evening()
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  const handleClick = () => {
-    setAnime('animate-slide-right')
+    if (hour < 4 || hour >= 19) night();
+    else if (hour < 6) morning();
+    else if (hour < 16) day()
+    else if (hour < 18) afternoon()
+    else evening()
   }
 
   const clickPrev = () => {
@@ -91,21 +84,21 @@ function App() {
       setPageSlide('-translate-y-[0rem]')
       scroller.scrollTo('intro', {
         smooth: true,
-        duration: 800
+        duration: 400
       })
     }
     else if (pages === 2) {
       setPageSlide('-translate-y-[6.45rem]')
       scroller.scrollTo('project', {
         smooth: true,
-        duration: 800
+        duration: 400
       })
     }
     else if (pages === 3) {
       setPageSlide('-translate-y-[12.9rem]')
       scroller.scrollTo('contact', {
         smooth: true,
-        duration: 800
+        duration: 400
       })
     }
   }, [pages])
@@ -144,7 +137,8 @@ function App() {
           </ul>
         </div>
       </aside>
-      <div className='h-screen py-44 px-16 flex justify-center border-b-2 border-white select-none' name='intro'>
+      <div className={`top-0 bottom-0 h-2 bg-black w-[]`}></div>
+      <div className='slide-down  h-screen py-44 px-16 flex justify-center border-b-2 border-white select-none' name='intro'>
         <div className='mt-36'>
           <h1 className=' text-6xl flex font-bold '>Hello <span className='mr-3 ml-3'><a href="https://emoji.gg/emoji/2084-heya"><img src="https://cdn3.emoji.gg/emojis/2084-heya.gif" width="50px" height="50px" alt="heya" /></a></span> I'm La Ode Abdul Dzarif Imaduddin</h1>
           <h1 className='text-3xl mt-5 font-medium'>I'm a
@@ -162,12 +156,11 @@ function App() {
           </h1>
         </div>
       </div>
-      <ProjectCarousel />
-      <div className='h-screen' name='contact'>
-        <h1 onClick={() => handleClick()}>
-          Hello World 3
-        </h1>
-      </div>
+      <ProjectCarousel textColor={textColor} className="slide-down" />
+      <GetInTouch />
+      {/* <div className='slide-down h-screen' name='contact'>
+        <img src="https://ghchart.rshah.org/alif-dzarif" alt="2016rshah's Github chart" />
+      </div> */}
     </div>
   )
 }
