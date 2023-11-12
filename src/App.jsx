@@ -109,7 +109,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`w-full h-full ${bgTime} bg-fixed ${textColor} theme overflow-hidden`}>
+    <div className={`back-body w-full h-full ${bgTime} bg-fixed ${textColor} theme overflow-hidden`}>
       <div className="fixed h-[120px] py-10 px-20 top-0 left-0 right-0 bg-white bg-opacity-[0.001]">
         <button className={`button button-fill border-2 ${buttonBorder} 
             ${hour2 < 6 || hour2 >= 18 ? 'before:bg-white' : 'before:bg-black'} 

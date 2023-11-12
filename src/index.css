@@ -6,6 +6,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.back-body {
+  transition: all 0.3s linear;
+}
+
 .button {
   position: relative;
   background-color: transparent;
@@ -129,7 +133,6 @@ body::-webkit-scrollbar {
 
 .icon-frame:hover {
   width: 300px;
-  background-color: white;
 }
 
 .icon-frame .icon-item {
