@@ -135,12 +135,12 @@ function App() {
           INTRO
         </button>
       </div>
-      <aside className={`fixed top-[30%] right-0 z-[99] w-16 h-52 rounded-l-xl border-4 border-r-0 overflow-hidden inline-block ${buttonBorder}`}>
+      <aside className={`fixed top-[30%] right-0 z-[99] w-16 h-52 rounded-l-xl border-4 bg-slate-600 border-r-0 overflow-hidden inline-block ${buttonBorder} shadow-sm shadow-white`}>
         <div className='z-[3] flex items-center flex-col h-36 justify-between py-3'>
-          <div onClick={clickPrev} className={`cursor-pointer w-10 h-10 ${pages === 1 ? 'text-slate-500' : ''}`}>
+          <div onClick={clickPrev} className={`cursor-pointer w-10 h-10 ${pages === 1 ? 'text-slate-500' : 'text-yellow-400'}`}>
             <FontAwesomeIcon icon={faAnglesUp} size='2xl' className='' />
           </div>
-          <div onClick={clickNext} className={`cursor-pointer w-10 h-10 ${pages === 5 ? 'text-slate-500' : ''} `}>
+          <div onClick={clickNext} className={`cursor-pointer w-10 h-10 ${pages === 5 ? 'text-slate-500' : 'text-yellow-400'} `}>
             <FontAwesomeIcon icon={faAnglesDown} size='2xl' className='' />
           </div>
         </div>
@@ -157,7 +157,7 @@ function App() {
       <div className={`top-0 bottom-0 h-2 bg-black w-[]`}></div>
       <div className='slide-down  h-screen py-44 px-16 flex justify-center select-none' name='intro' >
         <div className='mt-36'>
-          <h1 className=' text-6xl flex font-bold '>Hello <span className='mr-3 ml-3'><a href="https://emoji.gg/emoji/2084-heya"><img src="https://cdn3.emoji.gg/emojis/2084-heya.gif" width="50px" height="50px" alt="heya" /></a></span> I'm <span className='text-yellow-500 ml-5 txt-outline'>La Ode Abdul Dzarif Imaduddin</span></h1>
+          <h1 className=' text-6xl flex font-bold '>Hello <span className='mr-3 ml-3'><a href="https://emoji.gg/emoji/2084-heya"><img src="https://cdn3.emoji.gg/emojis/2084-heya.gif" width="50px" height="50px" alt="heya" /></a></span> I'm <span className='ml-5 txt-outline'>La Ode Abdul Dzarif Imaduddin</span></h1>
           <h1 className='text-3xl mt-5 font-semibold'>I'm a
             <span className='ml-3 text-purple-700 txt-outline'>
               <Typewriter

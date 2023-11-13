@@ -1,26 +1,15 @@
 import React from 'react'
-import { Tooltip } from 'react-tooltip'
-
-import 'react-tooltip/dist/react-tooltip.css'
-
 import me from '../assets/me/mefr.jpg'
 
 
 export default function AboutMe({ textColor }) {
   return (
     <div className={`h-screen w-screen px-40 pt-32 pb-20 ${textColor}`} name="aboutme">
-      <Tooltip
-        id='profile-image'
-        place='bottom'
-        variant='info'
-        content='Click to open LinkedIn'
-      >
-      </Tooltip>
       <h1 className={`text-center text-5xl font-bold`}>ABOUT ME</h1>
       <div className='grid grid-cols-2 w-full mt-32'>
         <div className='row-span-1 flex justify-center'>
-          <div id='profile-image' className='h-60 w-60 overflow-hidden rounded-full inline-block border-2 border-white hover:cursor-pointer outline outline-yellow-500 outline-4'>
-            <img src={me} className='mb-20 z-[-1] contrast-150 hover:brightness-125' />
+          <div className='h-60 w-60 overflow-hidden rounded-full inline-block border-2 border-white hover:cursor-pointer outline outline-yellow-500 outline-4'>
+            <img src={me} className='mb-20 z-[-1] contrast-150 hover:sepia' />
           </div>
         </div>
         <div className='text-xl font-semibold w-full row-span-1'>
