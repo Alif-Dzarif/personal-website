@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function GitContribution({ textColor }) {
+export default function GitContribution({ textColor, contributionRef }) {
   return (
-    <div className='h-screen w-screen px-40 pt-32 pb-20' name='contribution'>
+    <div ref={contributionRef} className='h-screen w-screen px-40 pt-32 pb-20' name='contribution'>
       <h1 className={`text-center text-5xl font-bold ${textColor}`}>GITHUB CONTRIBUTION</h1>
       <div className='px-52 mt-24'>
         <h1 className={`text-2xl font-semibold ${textColor}`}>Github Username : Alif-Dzarif</h1>

@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
 
 /* Add a transition effect for the color change */
 .side__pages li {
-  -webkit-text-stroke: 0.7px black;
+  /* -webkit-text-stroke: 0.7px black; */
   font-weight: bolder;
   transition: color 0.5s;
 }
