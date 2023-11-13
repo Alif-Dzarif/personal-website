@@ -13,7 +13,6 @@ body::-webkit-scrollbar {
 .button {
   position: relative;
   background-color: transparent;
-  font-family: "montserrat", sans-serif;
   text-transform: uppercase;
   padding: 8px 16px;
   min-width: 180px;
@@ -55,6 +54,40 @@ body::-webkit-scrollbar {
 .side__pages {
   transition: transform 0.4s ease-in;
 }
+
+/* Add a transition effect for the color change */
+.side__pages li {
+  -webkit-text-stroke: 0.7px black;
+  font-weight: bolder;
+  transition: color 0.5s;
+}
+
+.txt-outline {
+  -webkit-text-stroke: 0.3px black;
+  /* text-shadow: 2px 2px 2px black; */
+}
+
+/* Add different delay values for each list item */
+.side__pages li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.side__pages li:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.side__pages li:nth-child(3) {
+  transition-delay: 0.1s;
+}
+
+.side__pages li:nth-child(4) {
+  transition-delay: 0.1s;
+}
+
+.side__pages li:nth-child(5) {
+  transition-delay: 0.1s;
+}
+
 
 .swiper_container {
   height: 40rem;
