@@ -1,4 +1,4 @@
-import React from 'react' 
+import React from 'react'
 import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -21,20 +21,10 @@ import user_dummy from '../assets/images/user-dummy-API.png'
 
 
 
-export default function ProjectCarousel({ textColor }) {
-  const [hour, setHour] = useState(new Date().getHours())
-
-  const timer = () => {
-    setHour(new Date().getHours())
-  }
-
-  useEffect(() => {
-    const intervalHour = setInterval(timer, 1000);
-    return () => clearInterval(intervalHour);
-  }, []);
+export default function ProjectCarousel({ textColor, hour2, projectRef }) {
 
   return (
-    <div className='h-screen w-screen px-40 pt-32 pb-20' name='project'>
+    <div ref={projectRef} className='h-screen w-screen px-40 pt-32 pb-20' name='project'>
       <h1 className={`text-center text-5xl font-bold ${textColor}`}>PROJECTS</h1>
       <div className='flex items-center'>
         <Swiper
@@ -76,13 +66,13 @@ export default function ProjectCarousel({ textColor }) {
           <SwiperSlide>
             <img src={user_dummy} onClick={() => window.open('https://github.com/Alif-Dzarif/user-dummy-API')} alt="slide_image" />
           </SwiperSlide>
-          
+
 
           <div className="slider-controler">
-            <div className={`swiper-button-prev slider-arrow  ${hour < 6 || hour >= 18 ? 'text-white' : 'text-black'}`}>
+            <div className={`swiper-button-prev slider-arrow  ${hour2 < 6 || hour2 >= 18 ? 'text-white' : 'text-black'}`}>
               <FontAwesomeIcon icon={faCircleChevronLeft} />
             </div>
-            <div className={`swiper-button-next slider-arrow ${hour < 6 || hour >= 18 ? 'text-white' : 'text-black'}`}>
+            <div className={`swiper-button-next slider-arrow ${hour2 < 6 || hour2 >= 18 ? 'text-white' : 'text-black'}`}>
               <FontAwesomeIcon icon={faCircleChevronRight} />
             </div>
             <div className="swiper-pagination"></div>
