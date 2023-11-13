@@ -12,7 +12,7 @@ export default function GetInTouch({ bg }) {
   const [hour, setHour] = useState(new Date().getHours())
 
   const timer = () => {
-    setHour(new Date.getHours())
+    setHour(new Date().getHours())
   }
 
   const notify = () => {
@@ -86,28 +86,28 @@ export default function GetInTouch({ bg }) {
         <h1 className='text-5xl font-bold mb-16'>GET IN TOUCH</h1>
       </div>
       <div className='flex'>
-        <div className='shadow-xl w-[600px] h-[650px] rounded-2xl px-6 py-7 bg-slate-700 bg-opacity-20'>
+        <div className={`shadow-xl w-[600px] h-[650px] rounded-2xl px-6 py-7 ${hour < 4 || hour >= 18 ? 'bg-slate-600' : 'bg-slate-900'} bg-opacity-20`}>
           <h1 className='text-xl font-bold text-center'>Send A Message!</h1>
           <div className={`w-full border-b-4 leading-[1.6px] ${hour < 6 || hour >= 18 ? 'border-white' : 'border-black'} mt-3 mb-5 mx-0`} ></div>
           <form ref={form} onSubmit={handleSubmit} className='flex flex-col flex-wrap'>
             <div>
               <label className='font-bold text-lg'>FROM</label>
-              <input type='text' name='from_name' className='shadow-inner focus:outline-none w-full bg-slate-600 bg-opacity-25 py-2 px-4 h-14 rounded-xl mt-3 text-lg font-medium' />
+              <input type='text' name='from_name' className={`shadow-inner focus:outline-none w-full ${hour < 4 || hour >= 18 ? 'bg-slate-600' : 'bg-slate-800'} bg-opacity-25 py-2 px-4 h-14 rounded-xl mt-3 text-lg font-medium`}/>
             </div>
             <div className='mt-6'>
               <label className='font-bold text-lg'>EMAIL</label>
-              <input type='email' name='from_email' className=' shadow-inner w-full focus:outline-none bg-slate-600 bg-opacity-25 py-2 px-4 h-14 rounded-xl mt-3 text-lg font-medium' />
+              <input type='email' name='from_email' className={`shadow-inner focus:outline-none w-full ${hour < 4 || hour >= 18 ? 'bg-slate-600' : 'bg-slate-800'} bg-opacity-25 py-2 px-4 h-14 rounded-xl mt-3 text-lg font-medium`} />
             </div>
             <div className='mt-6'>
               <label className='font-bold text-lg'>MESSAGE</label>
-              <textarea name='message' className='shadow-inner w-full focus:outline-none bg-slate-600 rounded-xl bg-opacity-25 p-4 h-52 resize-none message-box text-lg font-medium'></textarea>
+              <textarea name='message' className={`shadow-inner w-full focus:outline-none ${hour < 4 || hour >= 18 ? 'bg-slate-600' : 'bg-slate-800'} rounded-xl bg-opacity-25 p-4 h-52 resize-none message-box text-lg font-medium`}></textarea>
             </div>
             <div className='mt-6'>
-              <button className='flex items-center justify-center h-8 w-24 bg-yellow-700 text-base font-bold rounded-3xl active:bg-yellow-600 px-10 py-5' type='submit'><span>SEND</span></button>
+              <button className={`flex items-center justify-center h-8 w-24 text-base font-bold rounded-3xl px-10 py-5 ${hour < 4 || hour >= 18 ? 'bg-yellow-700' : 'bg-yellow-400'} ${hour < 4 || hour >= 18 ? 'active:bg-yellow-300' : 'active:bg-yellow-600'}`} type='submit'><span>SEND</span></button>
             </div>
           </form>
         </div>
-        <div className='w-[500px] px-6 rounded-2xl bg-slate-700 bg-opacity-20 ml-7 py-5'>
+        <div className={`w-[500px] px-6 rounded-2xl ${hour < 4 || hour >= 18 ? 'bg-slate-600' : 'bg-slate-900'} bg-opacity-20 ml-7 py-5`}>
           <h1 className='text-xl font-bold text-center'>Social Media</h1>
           <div className={`w-full border-b-4 leading-[1.6px] ${hour < 6 || hour >= 18 ? 'border-white' : 'border-black'} mt-3 mb-5 mx-0`}></div>
           <div className='flex flex-col'>
@@ -121,10 +121,10 @@ export default function GetInTouch({ bg }) {
             </div>
             <div className='mt-5'>
               <div onClick={() => window.open('https://github.com/Alif-Dzarif')} className={`icon-frame ${hour < 6 || hour >= 18 ? 'bg-white' : 'bg-black'}`}>
-                <div className={`icon-item hover:bg-[#333] ${hour < 6 || hour >= 18 ? 'text-black' : 'text-white'} ${hour < 6 || hour >= 18 ? 'hover:text-white' : 'hover:text-black'}`}>
+                <div className={`icon-item ${hour < 6 || hour >= 18 ? 'hover:bg-[#333]' : 'hover:bg-white'} ${hour < 6 || hour >= 18 ? 'text-black' : 'text-white'} ${hour < 6 || hour >= 18 ? 'hover:text-white' : 'hover:text-black'}`}>
                   <FontAwesomeIcon icon={faGithub} size='xl' className={`leading-[60px]`} />
                 </div>
-                <span className='text-[#333]'>Alif-Dzarif</span>
+                <span className={`${hour < 6 || hour >= 18 ? 'text-[#333]' : 'text-white'}`}>Alif-Dzarif</span>
               </div>
             </div>
             <div className='mt-5'>
