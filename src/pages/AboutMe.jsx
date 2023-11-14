@@ -14,9 +14,9 @@ export default function AboutMe({ textColor, hour2, aboutmeRef }) {
         </div>
         <div className='text-xl font-semibold w-full row-span-1'>
           <p className='w-[600px] leading-10 text-justify'>
-            I graduated from Vocational High School, where I learned about Mikrotik, Networking and Computer Hardware, and a little bit about IoT.
-            I have skills in various web technologies, such as React Js, Vue Js, Redux, Pinia, JS, HTML and CSS, Tailwind CSS, and Apollo Client for the front end,
-            and Node Js, Express, GraphQL, Postgres, Sequelize, MVC pattern, and Apollo Server for the back end.
+            I graduated from Vocational High School, where I learned about <span className='underline'>Mikrotik, Networking and Computer Hardware, and a little bit about IoT</span>.
+            I have skills in various web technologies, such as <span className='underline'>React Js, Vue Js, Redux, Pinia, JS, HTML and CSS, Tailwind CSS, and Apollo Client</span> for the front end,
+            and <span className='underline'>Node Js, Express, GraphQL, Postgres, Sequelize, MVC pattern, and Apollo Server</span> for the back end.
             I enjoy working on challenging projects that require creativity and problem-solving skills. I’m always eager to improve my knowledge and expand my horizons.
           </p>
         </div>

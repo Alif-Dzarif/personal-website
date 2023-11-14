@@ -20,7 +20,7 @@ export default function Intro({ intro, hour2, textColor, introRef }) {
               cursorStyle='_'
               typeSpeed={50}
               deleteSpeed={30}
-              delaySpeed={1000}
+              delaySpeed={2000}
             />
           </span>
         </h1>
