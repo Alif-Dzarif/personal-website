@@ -69,23 +69,23 @@ body::-webkit-scrollbar {
 
 /* Add different delay values for each list item */
 .side__pages li:nth-child(1) {
-  transition-delay: 0.1s;
+  transition-delay: 0.15s;
 }
 
 .side__pages li:nth-child(2) {
-  transition-delay: 0.1s;
+  transition-delay: 0.15s;
 }
 
 .side__pages li:nth-child(3) {
-  transition-delay: 0.1s;
+  transition-delay: 0.15s;
 }
 
 .side__pages li:nth-child(4) {
-  transition-delay: 0.1s;
+  transition-delay: 0.15s;
 }
 
 .side__pages li:nth-child(5) {
-  transition-delay: 0.1s;
+  transition-delay: 0.15s;
 }
 
 

@@ -1,10 +1,14 @@
-import MainPage from './pages/MainPage'
+import { RouterProvider } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import router from './router'
 
 
 function App() {
 
   return (
-    <MainPage />
+    <AnimatePresence>
+      <RouterProvider router={router} />
+    </AnimatePresence>
   )
 }
 
