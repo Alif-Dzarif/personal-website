@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Personal Website",
+    "platform": "Website",
+    "url": "https://github.com/Alif-Dzarif/personal-website",
+    "info": "My personal website",
+    "tech": ["React", "Tailwind", "JavaScript"]
+  },
+  {
+    "name": "User Dummy API",
+    "platform": "API",
+    "url": "https://github.com/Alif-Dzarif/user-dummy-API",
+    "info": "A user dummy Rest API for dummy website",
+    "tech": ["Node JS", "PostgreSQL", "Sequelize", "Express JS"]
+  },
+  {
+    "name": "UBike",
+    "platform": "Mobile",
+    "url": "https://github.com/UBike-rmt-38",
+    "info": "A Bicycle rent app and integrated with GPS",
+    "tech": ["React Native", "GraphQL", "PostgreSQL", "Apollo", "Google Maps API", "Jest", "Express JS", "Sequelize"]
+  },
+  {
+    "name": "New York Times Clone Web",
+    "platform": "Website",
+    "url": "https://github.com/Alif-Dzarif/NYT-Clone",
+    "info": "A Times New York website clone",
+    "tech": [ "React", "Tailwind", "Redux" ,"Node JS", "PostgreSQL", "Sequelize", "Express JS"]
+  },
+  {
+    "name": "KanbanZen",
+    "platform": "Website",
+    "url": "https://github.com/Alif-Dzarif/KanbanZen-Client",
+    "info": "A kanban app for monitoring project progress",
+    "tech": [ "Vue", "Tailwind", "Axios", "Pinia" ,"Node JS", "PostgreSQL", "Sequelize", "Express JS"]
+  },
+  {
+    "name": "Mon Resto",
+    "platform": "Website",
+    "url": "https://github.com/Alif-Dzarif/Mon-Resto",
+    "info": "A restaurant menu list web app",
+    "tech": [ "Vue", "Tailwind", "Pinia", "Axios", "Node JS", "PostgreSQL", "Sequelize", "Express JS"]
+  }
+]
