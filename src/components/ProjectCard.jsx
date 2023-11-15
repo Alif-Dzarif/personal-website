@@ -7,12 +7,12 @@ import personal_website from '../assets/images/personal-website.png'
 import ubike from '../assets/images/UBike.png'
 import user_dummy from '../assets/images/user-dummy-API.png'
 
-export default function ProjectCard({ project, index }) {
+export default function ProjectCard({ project, index, hour2 }) {
 
   const images = [personal_website, user_dummy, ubike, nyt_clone, kanbanzen_client, mon_resto]
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl bg-opacity-70 hover:-translate-y-5 cursor-pointer transition-transform" onClick={() => window.open(project?.url)}>
+    <div className={`card w-96 bg-base-100 shadow-xl ${hour2 < 6 || hour2 >= 18 ? 'bg-opacity-40' : 'bg-opacity-10'} hover:-translate-y-5 cursor-pointer transition-transform`} onClick={() => window.open(project?.url)}>
       <figure className='h-52 overflow-hidden'><img src={images[index]} alt="Shoes" className='h-52 w-full'/></figure>
       <div className="card-body">
         <h2 className="card-title">

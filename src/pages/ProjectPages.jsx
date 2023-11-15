@@ -2,9 +2,6 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-
 import ProjectCard from '../components/ProjectCard'
 import project__data from '../data/projects.json'
 
@@ -93,7 +90,7 @@ export default function ProjectPages() {
       </div>
       <div className='grid grid-cols-4 gap-6 px-0 mt-20'>
         {project__data.map((project, idx) => (
-          <ProjectCard project={project} key={idx} index={idx} />
+          <ProjectCard project={project} key={idx} index={idx} hour2={hour2} />
         ))}
       </div>
     </motion.div>
