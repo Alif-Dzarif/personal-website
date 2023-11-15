@@ -2,14 +2,14 @@
 
 ## How to Run on Local
 
-install needed package
+- Install needed package
 ```
 npm install
 ```
 
-%nbsp;
+&nbsp;
 
-and then
+- And then run it
 ```
 npm run dev
 ```
