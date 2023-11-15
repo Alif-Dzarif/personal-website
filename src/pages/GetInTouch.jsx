@@ -60,7 +60,7 @@ export default function GetInTouch({ bg, hour2, contactRef }) {
       notify()
     }
     else {
-      emailjs.sendForm("service_99uakni", "template_f26h0je", form.current, '8CY5INcDbpBROTUfR')
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
         .then((result) => {
           console.log("message sent");
           success()

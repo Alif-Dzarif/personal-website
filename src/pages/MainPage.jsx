@@ -171,15 +171,15 @@ export default function MainPage() {
         <button onClick={() => pages > 1 ? window.scrollTo(0, 0) : setPages(pages)} className={`button button-fill border-2 ${buttonBorder} ${hour2 < 6 || hour2 >= 18 ? 'before:bg-white' : 'before:bg-black'} ${hour2 < 6 || hour2 >= 18 ? 'hover:text-black' : 'hover:text-white'} font-bold font-mono text-lg h-14`}>
           INTRO
         </button>
-        <div className='flex font-bold text-xl'>
-        <div className={`w-18 overflow-hidden`}>
-            <button onClick={() => navigate('/info')} className={`${menuClick ? 'translate-x-40' : 'translate-x-0'} hover:text-yellow-400 transition-transform mr-10 leading-[50px] z-20`}>INFO</button>
+        <div className='flex font-bold text-xl mt-4'>
+          <div className={`w-18 overflow-hidden h-20`}>
+            <button onClick={() => navigate('/general')} className={`${menuClick ? 'translate-x-40' : 'translate-x-0'} hover:text-yellow-400 transition-transform mr-10 leading-[50px] z-20`}>GENERAL</button>
           </div>
-          <div className={`w-18 overflow-hidden`}>
+          <div className={`w-18 overflow-hidden h-20`}>
             <button onClick={() => navigate('/projects')} className={`${menuClick ? 'translate-x-40' : 'translate-x-0'} hover:text-yellow-400 transition-transform mr-10 leading-[50px] z-20`}>PROJECTS</button>
           </div>
           <div onClick={menu} className='w-10 cursor-pointer -leading-5 z-30'>
-            <FontAwesomeIcon icon={faSquareCaretLeft} className={`w-12 h-12 ${menuClick ? 'text-yellow-400' : 'text-white'} transition-colors`} />
+            <FontAwesomeIcon icon={faSquareCaretLeft} className={`w-12 h-12 ${menuClick ? 'text-yellow-400' : 'text-white'} transition-colors drop-shadow-xl`} />
           </div>
         </div>
       </div>
