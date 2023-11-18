@@ -169,8 +169,8 @@ export default function MainPage() {
     >
       <div className="flex justify-between fixed h-[120px] top-0 left-0 right-0 bg-white bg-opacity-[0.001]
         2xl:py-10 2xl:px-20
-        max-2xl:px-10 max-2xl:py-5 
-        max-md:px-5 max-md:py-3 
+        max-2xl:px-10 max-2xl:py-7 
+        max-md:px-5 max-md:py-7 
       ">
         <button onClick={() => pages > 1 ? window.scrollTo(0, 0) : setPages(pages)} className={`relative cursor-pointer bg-transparent button button-fill border-2 font-bold font-mono
           2xl:m-[10px] 2xl:min-w-[180px] 2xl:py-2 2xl:px-4 2xl:text-lg 2xl:h-14
