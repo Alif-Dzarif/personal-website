@@ -166,37 +166,37 @@ export default function MainPage() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-    >
+    > 
       <div className="flex justify-between fixed h-[120px] top-0 left-0 right-0 bg-white bg-opacity-[0.001]
-        2xl:py-10 2xl:px-20
-        max-2xl:px-10 max-2xl:py-7 
+        min-[1681px]:py-10 min-[1681px]:px-20
+        max-[1680px]:px-10 max-[1680px]:py-7 
         max-md:px-5 max-md:py-7 
       ">
         <button onClick={() => pages > 1 ? window.scrollTo(0, 0) : setPages(pages)} className={`relative cursor-pointer bg-transparent button button-fill border-2 font-bold font-mono
-          2xl:m-[10px] 2xl:min-w-[180px] 2xl:py-2 2xl:px-4 2xl:text-lg 2xl:h-14
-          max-2xl:m-[5px] max-2xl:min-w-[140px] max-2xl:py-1 max-2xl:px-2 max-2xl:text-base max-2xl:h-12
+          min-[1681px]:m-[10px] min-[1681px]:min-w-[180px] min-[1681px]:py-2 min-[1681px]:px-4 min-[1681px]:text-lg min-[1681px]:h-14
+          max-[1680px]:m-[5px] max-[1680px]:min-w-[140px] max-[1680px]:py-1 max-[1680px]:px-2 max-[1680px]:text-base max-[1680px]:h-10
           max-md:m-[5px] max-md:min-w-[90px] max-md:py-[2px] max-md:px-1 max-md:text-base max-md:h-11
           ${buttonBorder} ${hour2 < 6 || hour2 >= 18 ? 'before:bg-white' : 'before:bg-black'} ${hour2 < 6 || hour2 >= 18 ? 'hover:text-black' : 'hover:text-white'}
         `}>
           INTRO
         </button>
-        <div className='flex font-bold max-2xl:texl-lg 2xl:text-xl max-2xl:mt-2 2xl:mt-4'>
-          <div className={`max-md:w-20 2xl:w-18 overflow-hidden h-20`}>
+        <div className='flex font-bold max-[1680px]:texl-lg min-[1681px]:text-xl max-[1680px]:mt-2 min-[1681px]:mt-4'>
+          <div className={`max-md:w-20 min-[1681px]:w-18 overflow-hidden h-20`}>
             <button onClick={() => navigate('/general')} className={`${menuClick ? 'translate-x-40' : 'translate-x-0'} hover:text-yellow-400 transition-transform mr-10 leading-[50px] z-20`}>GENERAL</button>
           </div>
-          <div className={`max-md:w-20 2xl:w-18 overflow-hidden h-20`}>
+          <div className={`max-md:w-20 min-[1681px]:w-18 overflow-hidden h-20`}>
             <button onClick={() => navigate('/projects')} className={`${menuClick ? 'translate-x-40' : 'translate-x-0'} hover:text-yellow-400 transition-transform mr-10 leading-[50px] z-20`}>PROJECTS</button>
           </div>
           <div onClick={menu} className='w-10 cursor-pointer -leading-5 z-30'>
-            <FontAwesomeIcon icon={faSquareCaretLeft} className={`max-2xl:w-11 max-2xl:h-11 2xl:w-12 2xl:h-12 ${menuClick ? 'text-yellow-400' : 'text-white'} transition-colors drop-shadow-xl`} />
+            <FontAwesomeIcon icon={faSquareCaretLeft} className={`max-[1680px]:w-11 max-[1680px]:h-11 min-[1681px]:w-12 min-[1681px]:h-12 ${menuClick ? 'text-yellow-400' : 'text-white'} transition-colors drop-shadow-xl`} />
           </div>
         </div>
       </div>
       <aside className={`max-lg:hidden visible fixed border-4 border-r-0 bg-slate-600 right-0 z-[99]] overflow-hidden inline-block ${buttonBorder} shadow-sm shadow-white
-        2xl:top-[27%] 2xl:w-14 2xl:h-64 2xl:rounded-l-xl
-        max-2xl:top-[27%] max-2xl:w-12 max-2xl:h-60 max-2xl:rounded-l-lg
+        min-[1681px]:top-[27%] min-[1681px]:w-14 min-[1681px]:h-64 min-[1681px]:rounded-l-xl
+        max-[1680px]:top-[27%] max-[1680px]:w-12 max-[1680px]:h-60 max-[1680px]:rounded-l-lg
       `}>
-        <div className='z-[3] flex items-center flex-col h-36 justify-between max-2xl:px-1 py-3'>
+        <div className='z-[3] flex items-center flex-col h-36 justify-between max-[1680px]:px-1 py-3'>
           <div onClick={clickPrev} className={`cursor-pointer w-10 h-10 ${pages === 1 ? 'text-gray-400' : 'text-yellow-400'}`}>
             <FontAwesomeIcon icon={faAnglesUp} size='2xl' className='' />
           </div>
@@ -204,7 +204,7 @@ export default function MainPage() {
             <FontAwesomeIcon icon={faAnglesDown} size='2xl' className='' />
           </div>
         </div>
-        <div className='z-[-1] h-52 overflow-visible absolute 2xl:left-0 max-2xl:left-[-4px] leading-4 flex items-center flex-col w-full select-none top-0'>
+        <div className='z-[-1] h-52 overflow-visible absolute min-[1681px]:left-0 max-[1680px]:left-[-4px] leading-4 flex items-center flex-col w-full select-none top-0'>
           <ul className={`text-2xl absolute left-2 ${pageSlide} side__pages`}>
             <li className={`h-20 my-6 flex items-center ${pages === 1 ? 'text-yellow-300' : 'text-white'}`}>01</li>
             <li className={`h-20 my-6 flex items-center ${pages === 2 ? 'text-yellow-300' : 'text-white'}`}>02</li>

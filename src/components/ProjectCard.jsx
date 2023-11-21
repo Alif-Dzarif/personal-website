@@ -12,8 +12,8 @@ export default function ProjectCard({ project, index, hour2 }) {
   const images = [personal_website, user_dummy, ubike, nyt_clone, kanbanzen_client, mon_resto]
 
   return (
-    <div className={`card w-96 bg-base-100 shadow-xl ${hour2 < 6 || hour2 >= 18 ? 'bg-opacity-40' : 'bg-opacity-10'} hover:-translate-y-5 cursor-pointer transition-transform`} onClick={() => window.open(project?.url)}>
-      <figure className='h-52 overflow-hidden'><img src={images[index]} alt="Shoes" className='h-52 w-full'/></figure>
+    <div className={`card max-[1680px]:w-72 min-[1681px]:w-96 bg-base-100 shadow-xl ${hour2 < 6 || hour2 >= 18 ? 'bg-opacity-40' : 'bg-opacity-10'} hover:-translate-y-5 cursor-pointer transition-transform`} onClick={() => window.open(project?.url)}>
+      <figure className='max-[1680px]:h-40 min-[1681px]:h-52 overflow-hidden'><img src={images[index]} alt="Shoes" className=' max-[1680px]:h-40 min-[1681px]:h-52 w-full'/></figure>
       <div className="card-body">
         <h2 className="card-title">
           {project?.name}

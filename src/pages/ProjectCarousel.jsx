@@ -24,8 +24,8 @@ import user_dummy from '../assets/images/user-dummy-API.png'
 export default function ProjectCarousel({ textColor, hour2, projectRef }) {
 
   return (
-    <div ref={projectRef} className='h-screen w-screen px-40 pt-32 pb-20' name='project'>
-      <h1 className={`text-center text-5xl font-bold ${textColor}`}>PROJECTS</h1>
+    <div ref={projectRef} className='max-lg:hidden h-screen w-screen max-[1680px]:px-52 max-[1680px]:pt-28 max-[1680px]:pb-24 min-[1681px]:px-40 min-[1681px]:pt-32 min-[1681px]:pb-20 z-[-1]' name='project'>
+      <h1 className={`text-center max-[1680px]:text-4xl min-[1681px]:text-5xl font-bold ${textColor}`}>PROJECTS</h1>
       <div className='flex items-center'>
         <Swiper
           effect={'coverflow'}
@@ -70,7 +70,7 @@ export default function ProjectCarousel({ textColor, hour2, projectRef }) {
 
           <div className="slider-controler">
             <div className={`swiper-button-prev slider-arrow  ${hour2 < 6 || hour2 >= 18 ? 'text-white' : 'text-black'}`}>
-              <FontAwesomeIcon icon={faCircleChevronLeft} />
+              <FontAwesomeIcon className='' icon={faCircleChevronLeft} />
             </div>
             <div className={`swiper-button-next slider-arrow ${hour2 < 6 || hour2 >= 18 ? 'text-white' : 'text-black'}`}>
               <FontAwesomeIcon icon={faCircleChevronRight} />

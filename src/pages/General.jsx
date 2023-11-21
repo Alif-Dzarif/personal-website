@@ -99,94 +99,94 @@ export default function General() {
     >
       <div className=''>
         <div className='leading-[30px]'>
-          <button onClick={() => navigate('/')} className={`absolute active:bg-yellow-500 hover:-translate-x-4 transition-transform bg-yellow-400 w-52 h-14 text-black font-bold text-xl inline-block`}>
+          <button onClick={() => navigate('/')} className={`absolute active:bg-yellow-500 hover:-translate-x-4 transition-transform bg-yellow-400 max-[1681px]:w-36 max-[1681px]:h-12 min-[1681px]:w-52 min-[1681px]:h-14 text-black font-bold max-[1680px]:text-lg min-[1681px]:text-xl inline-block`}>
             GO BACK
           </button>
         </div>
       </div>
       <div className='mt-10 py-10 text-center'>
-        <h1 className='text-[60px] font-extrabold'>“Aller Anfang ist schwer” </h1>
+        <h1 className='max-[1680px]:text-5xl min-[1681px]:text-[60px] font-extrabold'>“Aller Anfang ist schwer” </h1>
       </div>
       <div className='grid gap-5 grid-cols-2 mt-10'>
         <div>
           <div className={`bg-gray-400 ${hour2 < 6 || hour2 >= 18 ? 'bg-opacity-40' : 'bg-opacity-10'} px-7 py-7 h-auto rounded-[30px]`}>
-            <h1 className='text-center text-xl font-semibold mb-7'>ANOTHER ACCOUNT</h1>
-            <div className='bg-white bg-opacity-70 rounded-xl px-8 py-4 text-black font-extrabold'>
+            <h1 className='text-center max-[1680px]:text-lg min-[1681px]:text-xl font-semibold mb-7'>ANOTHER ACCOUNT</h1>
+            <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold'>
               <div className='flex items-center'>
-                <FontAwesomeIcon icon={faSpotify} className='h-10 w-10' />
-                <span className='ml-10 text-xl'>Alif Dzarif</span>
+                <FontAwesomeIcon icon={faSpotify} className='max-[1680px]:h-6 max-[1680px]:w-6 min-[1681px]:h-10 min-[1681px]:w-10' />
+                <span className='ml-10 max-[1680px]:text-base min-[1681px]:text-xl'>Alif Dzarif</span>
               </div>
             </div>
-            <div className='bg-white bg-opacity-70 rounded-xl px-8 py-4 text-black font-extrabold mt-3'>
+            <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
               <div className='flex items-center'>
-                <FontAwesomeIcon icon={faXbox} className='h-10 w-10' />
-                <span className='ml-10 text-xl'>ShiroNeko 69<span className=' text-gray-500'>#797</span></span>
+                <FontAwesomeIcon icon={faXbox} className='max-[1680px]:h-6 max-[1680px]:w-6 min-[1681px]:h-10 min-[1681px]:w-10' />
+                <span className='ml-10 max-[1680px]:text-base min-[1681px]:text-xl'>ShiroNeko 69<span className=' text-gray-500'>#797</span></span>
               </div>
             </div>
-            <div className='bg-white bg-opacity-70 rounded-xl px-8 py-4 text-black font-extrabold mt-3'>
+            <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
               <div className='flex items-center'>
-                <FontAwesomeIcon icon={faSteam} className='h-10 w-10' />
-                <span className='ml-10 text-xl'>ShiroNeko9  </span>
+                <FontAwesomeIcon icon={faSteam} className='max-[1680px]:h-6 max-[1680px]:w-6 min-[1681px]:h-10 min-[1681px]:w-10' />
+                <span className='ml-10 max-[1680px]:text-base min-[1681px]:text-xl'>ShiroNeko9  </span>
               </div>
             </div>
           </div>
           <div className={`bg-gray-400 ${hour2 < 6 || hour2 >= 18 ? 'bg-opacity-40' : 'bg-opacity-10'} px-7 py-7 h-auto mt-5 rounded-[30px]`}>
-            <h1 className='text-center text-xl font-semibold mb-7'>PLAYED GAMES</h1>
-            <div onClick={clickedEvents} className='bg-white cursor-pointer bg-opacity-70 rounded-xl px-8 py-3 text-black font-extrabold h-28 overflow-hidden'>
-              <div className={`${clicked ? '-translate-y-[120px]' : ''} transition-transform`}>
+            <h1 className='text-center max-[1680px]:text-lg min-[1681px]:text-xl font-semibold mb-7'>PLAYED GAMES</h1>
+            <div onClick={clickedEvents} className='bg-white cursor-pointer bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:h-20 min-[1681px]:h-28 overflow-hidden'>
+              <div className={`${clicked ? 'max-[1680px]:-translate-y-[94px] min-[1681px]:-translate-y-[120px]' : ''} transition-transform`}>
                 <div className='flex items-center justify-between'>
-                  <img src={honkai__impact} className=' h-auto w-32 ml-4' />
-                  <p className='text-lg'>HONKAI IMPACT 3</p>
+                  <img src={honkai__impact} className='h-auto max-[1680px]:w-20 min-[1681px]:w-32 ml-4' />
+                  <p className='max-[1680px]:text-base min-[1681px]:text-lg'>HONKAI IMPACT 3</p>
                 </div>
                 <div className='h-20 w-full items-center mt-4 flex justify-between'>
-                  <span className='ml-6 text-2xl'>ShiroNeko-Kun</span>
-                  <span className='ml-6 text-2xl'>ID: 18523860</span>
+                  <span className='ml-6 max-[1680px]:text-xl min-[1681px]:text-2xl'>ShiroNeko-Kun</span>
+                  <span className='ml-6 max-[1680px]:text-xl min-[1681px]:text-2xl'>ID: 18523860</span>
                 </div>
               </div>
             </div>
-            <div className='bg-white bg-opacity-70 rounded-xl px-8 mt-3 py-3 text-black font-extrabold h-28 overflow-hidden'>
+            <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:mt-2 min-[1681px]:mt-3 max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:h-20 min-[1681px]:h-28 overflow-hidden'>
               <div className=''>
                 <div className='flex items-center justify-between'>
-                  <img src={scarlet__nexus} className=' h-auto w-52 mt-3' />
-                  <p className='text-lg mt-2'>SCARLET NEXUS</p>
+                  <img src={scarlet__nexus} className='h-auto max-[1680px]:w-32 min-[1681px]:w-52 mt-3' />
+                  <p className='max-[1680px]:text-base min-[1681px]:text-lg mt-2'>SCARLET NEXUS</p>
                 </div>
               </div>
             </div>
-            <div className='bg-white bg-opacity-70 rounded-xl px-8 mt-3 py-3 text-black font-extrabold h-28 overflow-hidden'>
+            <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:mt-2 min-[1681px]:mt-3 max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:h-20 min-[1681px]:h-28 overflow-hidden'>
               <div className=''>
                 <div className='flex items-center justify-between'>
-                  <img src={cod__mobile} className=' h-auto w-32 mt-6 ml-4' />
-                  <p className='text-lg mt-4'>CALL OF DUTY MOBILE</p>
+                  <img src={cod__mobile} className=' h-auto max-[1680px]:w-20 min-[1681px]:w-32 mt-6 ml-4' />
+                  <p className='max-[1680px]:text-base min-[1681px]:text-lg mt-4'>CALL OF DUTY MOBILE</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className={`bg-gray-400 ${hour2 < 6 || hour2 >= 18 ? 'bg-opacity-40' : 'bg-opacity-10'} px-7 py-7 h-[470px] rounded-[30px] inline-block`}>
-          <h1 className='text-center text-xl font-semibold mb-7'>HOBBIES</h1>
-          <div className='bg-white bg-opacity-70 rounded-xl px-8 py-4 text-black font-extrabold mt-3'>
+        <div className={`bg-gray-400 ${hour2 < 6 || hour2 >= 18 ? 'bg-opacity-40' : 'bg-opacity-10'} max-[1681px]:px-7 max-[1681px]:py-7 min-[1681px]:px-7 min-[1681px]:py-7 max-[1680px]:h-[400px] min-[1681px]:h-[470px] rounded-[30px] inline-block`}>
+          <h1 className='text-center text-xl font-semibold max-[1680px]:mb-5 min-[1681px]:mb-7'>HOBBIES</h1>
+          <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
             <div className='flex items-center'>
-              <span className='text-xl'>Programming</span>
+              <span className='max-[1680px]:text-lg min-[1681px]:text-xl'>Programming</span>
             </div>
           </div>
-          <div className='bg-white bg-opacity-70 rounded-xl px-8 py-4 text-black font-extrabold mt-3'>
+          <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
             <div className='flex items-center'>
-              <span className='text-xl'>Badminton</span>
+              <span className='max-[1680px]:text-lg min-[1681px]:text-xl'>Badminton</span>
             </div>
           </div>
-          <div className='bg-white bg-opacity-70 rounded-xl px-8 py-4 text-black font-extrabold mt-3'>
+          <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
             <div className='flex items-center'>
-              <span className='text-xl'>Gaming</span>
+              <span className='max-[1680px]:text-lg min-[1681px]:text-xl'>Gaming</span>
             </div>
           </div>
-          <div className='bg-white bg-opacity-70 rounded-xl px-8 py-4 text-black font-extrabold mt-3'>
+          <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
             <div className='flex items-center'>
-              <span className='text-xl'>Listening Music</span>
+              <span className='max-[1680px]:text-lg min-[1681px]:text-xl'>Listening Music</span>
             </div>
           </div>
-          <div className='bg-white bg-opacity-70 rounded-xl px-8 py-4 text-black font-extrabold mt-3'>
+          <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
             <div className='flex items-center'>
-              <span className='text-xl'>Watching Anime</span>
+              <span className='max-[1680px]:text-lg min-[1681px]:text-xl'>Watching Anime</span>
             </div>
           </div>
         </div>

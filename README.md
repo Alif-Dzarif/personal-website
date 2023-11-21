@@ -28,6 +28,5 @@ Target:
 - [x] Create All Project Page 
 - [x] Create General Page
 
-- [ ] FHD Responsive Design
-- [ ] Tablet Responsive Design
+- [X] FHD Responsive Design
 - [ ] Mobile Responsive Design
