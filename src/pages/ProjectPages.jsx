@@ -78,17 +78,25 @@ export default function ProjectPages() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className={`back-body relative w-screen h-full ${bgTime} bg-fixed ${textColor} theme transition-colors font-mono px-40 py-20`}
+      className={`back-body relative w-screen max-[1000px]:py-10 max-[1000px]:px-10 h-full ${bgTime} bg-fixed ${textColor} theme transition-colors font-mono px-40 py-20`}
     >
-      <div className=''>
-        <div className='leading-[30px]'>
-          <button onClick={() => navigate('/')} className={`absolute active:bg-yellow-500 hover:-translate-x-7 transition-transform bg-yellow-400 max-[1681px]:w-36 max-[1681px]:h-12 min-[1681px]:w-52 min-[1681px]:h-14 text-black font-bold max-[1680px]:text-lg min-[1681px]:text-xl inline-block`}>
+      <div className='max-[1000px]:hidden'>
+        <div className='min-[1001px]:leading-[30px]'>
+          <button onClick={() => navigate('/')} className={`absolute active:bg-yellow-500 hover:-translate-x-7 max-[1000px]:mt-20 transition-transform max-[1000px]:w-28 bg-yellow-400 max-[1681px]:w-36 max-[1681px]:h-12 min-[1681px]:w-52 min-[1681px]:h-14 text-black font-bold max-[1000px]:text-base max-[1680px]:text-lg min-[1681px]:text-xl inline-block`}>
             GO BACK
           </button>
-          <h1 className='text-center max-[1680px]:text-4xl min-[1681px]:text-5xl font-bold'>ALL PROJECTS</h1>
+          <h1 className='text-center max-[1000px]:text-2xl max-[1000px]:mt-5 max-[1680px]:text-4xl min-[1681px]:text-5xl font-bold'>ALL PROJECTS</h1>
         </div>
       </div>
-      <div className='grid max-[1680px]:grid-cols-3 min-[1681px]:grid-cols-4 gap-6 px-0 mt-20'>
+      <div className='min-[1001px]:hidden'>
+        <div className='min-[1001px]:leading-[30px]'>
+          <button onClick={() => navigate('/')} className={`active:bg-yellow-500 hover:-translate-x-7 max-[1000px]:mt-5 max-[1000px]:h-10 transition-transform max-[1000px]:w-28 bg-yellow-400 max-[1681px]:w-36 max-[1681px]:h-12 min-[1681px]:w-52 min-[1681px]:h-14 text-black font-bold max-[1000px]:text-base max-[1680px]:text-lg min-[1681px]:text-xl`}>
+            GO BACK
+          </button>
+          <h1 className='text-center max-[1000px]:text-2xl max-[1000px]:mt-10 max-[1680px]:text-4xl min-[1681px]:text-5xl font-bold'>ALL PROJECTS</h1>
+        </div>
+      </div>
+      <div className='grid max-[1000px]:grid-cols-1 max-[1680px]:grid-cols-3 min-[1681px]:grid-cols-4 gap-6 px-0 mt-20'>
         {project__data.map((project, idx) => (
           <ProjectCard project={project} key={idx} index={idx} hour2={hour2} />
         ))}

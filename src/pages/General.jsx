@@ -95,52 +95,52 @@ export default function General() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className={`back-body relative w-screen h-full ${bgTime} bg-fixed ${textColor} theme transition-colors font-mono px-40 py-20`}
+      className={`back-body relative w-screen h-full max-[1000px]:px-10 max-[1000px]:py-10 ${bgTime} bg-fixed ${textColor} theme transition-colors font-mono px-40 py-20`}
     >
       <div className=''>
         <div className='leading-[30px]'>
-          <button onClick={() => navigate('/')} className={`absolute active:bg-yellow-500 hover:-translate-x-4 transition-transform bg-yellow-400 max-[1681px]:w-36 max-[1681px]:h-12 min-[1681px]:w-52 min-[1681px]:h-14 text-black font-bold max-[1680px]:text-lg min-[1681px]:text-xl inline-block`}>
+          <button onClick={() => navigate('/')} className={`absolute active:bg-yellow-500 hover:-translate-x-4 max-[1000px]:mt-5 max-[1000px]:h-10 max-[1000px]:w-28 transition-transform bg-yellow-400 max-[1681px]:w-36 max-[1681px]:h-12 min-[1681px]:w-52 min-[1681px]:h-14 text-black font-bold max-[1680px]:text-lg min-[1681px]:text-xl inline-block`}>
             GO BACK
           </button>
         </div>
       </div>
       <div className='mt-10 py-10 text-center'>
-        <h1 className='max-[1680px]:text-5xl min-[1681px]:text-[60px] font-extrabold'>“Aller Anfang ist schwer” </h1>
+        <h1 className=' max-[1000px]:mt-5 max-[1000px]:text-2xl max-[1680px]:text-5xl min-[1681px]:text-[60px] font-extrabold'>“Aller Anfang ist schwer” </h1>
       </div>
-      <div className='grid gap-5 grid-cols-2 mt-10'>
+      <div className='max-[1000px]:mt-2 grid max-[1000px]:grid-cols-1 gap-5 grid-cols-2 mt-10'>
         <div>
           <div className={`bg-gray-400 ${hour2 < 6 || hour2 >= 18 ? 'bg-opacity-40' : 'bg-opacity-10'} px-7 py-7 h-auto rounded-[30px]`}>
             <h1 className='text-center max-[1680px]:text-lg min-[1681px]:text-xl font-semibold mb-7'>ANOTHER ACCOUNT</h1>
-            <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold'>
+            <div onClick={() => window.open('https://open.spotify.com/user/312syokecf37u4cxxzkq3px4k4d4')} className='cursor-pointer bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold'>
               <div className='flex items-center'>
                 <FontAwesomeIcon icon={faSpotify} className='max-[1680px]:h-6 max-[1680px]:w-6 min-[1681px]:h-10 min-[1681px]:w-10' />
-                <span className='ml-10 max-[1680px]:text-base min-[1681px]:text-xl'>Alif Dzarif</span>
+                <span className='ml-10 max-[1000px]:text-sm max-[1680px]:text-base min-[1681px]:text-xl'>Alif Dzarif</span>
               </div>
             </div>
             <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
               <div className='flex items-center'>
                 <FontAwesomeIcon icon={faXbox} className='max-[1680px]:h-6 max-[1680px]:w-6 min-[1681px]:h-10 min-[1681px]:w-10' />
-                <span className='ml-10 max-[1680px]:text-base min-[1681px]:text-xl'>ShiroNeko 69<span className=' text-gray-500'>#797</span></span>
+                <span className='ml-10 max-[1000px]:text-sm max-[1680px]:text-base min-[1681px]:text-xl'>ShiroNeko 69<span className=' text-gray-500'>#797</span></span>
               </div>
             </div>
-            <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
+            <div onClick={() => window.open('https://steamcommunity.com/profiles/76561199356825937/')} className='cursor-pointer bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
               <div className='flex items-center'>
                 <FontAwesomeIcon icon={faSteam} className='max-[1680px]:h-6 max-[1680px]:w-6 min-[1681px]:h-10 min-[1681px]:w-10' />
-                <span className='ml-10 max-[1680px]:text-base min-[1681px]:text-xl'>ShiroNeko9  </span>
+                <span className='ml-10 max-[1000px]:text-sm max-[1680px]:text-base min-[1681px]:text-xl'>ShiroNeko9  </span>
               </div>
             </div>
           </div>
           <div className={`bg-gray-400 ${hour2 < 6 || hour2 >= 18 ? 'bg-opacity-40' : 'bg-opacity-10'} px-7 py-7 h-auto mt-5 rounded-[30px]`}>
             <h1 className='text-center max-[1680px]:text-lg min-[1681px]:text-xl font-semibold mb-7'>PLAYED GAMES</h1>
-            <div onClick={clickedEvents} className='bg-white cursor-pointer bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:h-20 min-[1681px]:h-28 overflow-hidden'>
+            <div onClick={clickedEvents} className='bg-white cursor-pointer bg-opacity-70 rounded-xl max-[1000px]:px-2  max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:h-20 min-[1681px]:h-28 overflow-hidden'>
               <div className={`${clicked ? 'max-[1680px]:-translate-y-[94px] min-[1681px]:-translate-y-[120px]' : ''} transition-transform`}>
                 <div className='flex items-center justify-between'>
                   <img src={honkai__impact} className='h-auto max-[1680px]:w-20 min-[1681px]:w-32 ml-4' />
-                  <p className='max-[1680px]:text-base min-[1681px]:text-lg'>HONKAI IMPACT 3</p>
+                  <p className=' min-[1000px]:visible hidden max-[1680px]:text-base min-[1681px]:text-lg'>HONKAI IMPACT 3</p>
                 </div>
                 <div className='h-20 w-full items-center mt-4 flex justify-between'>
-                  <span className='ml-6 max-[1680px]:text-xl min-[1681px]:text-2xl'>ShiroNeko-Kun</span>
-                  <span className='ml-6 max-[1680px]:text-xl min-[1681px]:text-2xl'>ID: 18523860</span>
+                  <span className='ml-6 max-[1000px]:ml-1  max-[1000px]:text-sm max-[1680px]:text-xl min-[1681px]:text-2xl'>ShiroNeko-Kun</span>
+                  <span className='ml-6 max-[1000px]:ml-1  max-[1000px]:text-sm max-[1680px]:text-xl min-[1681px]:text-2xl'>ID: 18523860</span>
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@ export default function General() {
               <div className=''>
                 <div className='flex items-center justify-between'>
                   <img src={scarlet__nexus} className='h-auto max-[1680px]:w-32 min-[1681px]:w-52 mt-3' />
-                  <p className='max-[1680px]:text-base min-[1681px]:text-lg mt-2'>SCARLET NEXUS</p>
+                  <p className=' min-[1000px]:visible hidden max-[1680px]:text-base min-[1681px]:text-lg mt-2'>SCARLET NEXUS</p>
                 </div>
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function General() {
               <div className=''>
                 <div className='flex items-center justify-between'>
                   <img src={cod__mobile} className=' h-auto max-[1680px]:w-20 min-[1681px]:w-32 mt-6 ml-4' />
-                  <p className='max-[1680px]:text-base min-[1681px]:text-lg mt-4'>CALL OF DUTY MOBILE</p>
+                  <p className=' min-[1000px]:visible hidden max-[1680px]:text-base min-[1681px]:text-lg mt-4'>CALL OF DUTY MOBILE</p>
                 </div>
               </div>
             </div>
@@ -166,27 +166,27 @@ export default function General() {
           <h1 className='text-center text-xl font-semibold max-[1680px]:mb-5 min-[1681px]:mb-7'>HOBBIES</h1>
           <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
             <div className='flex items-center'>
-              <span className='max-[1680px]:text-lg min-[1681px]:text-xl'>Programming</span>
+              <span className=' max-[1000px]:text-base max-[1680px]:text-lg min-[1681px]:text-xl'>Programming</span>
             </div>
           </div>
           <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
             <div className='flex items-center'>
-              <span className='max-[1680px]:text-lg min-[1681px]:text-xl'>Badminton</span>
+              <span className=' max-[1000px]:text-base max-[1680px]:text-lg min-[1681px]:text-xl'>Badminton</span>
             </div>
           </div>
           <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
             <div className='flex items-center'>
-              <span className='max-[1680px]:text-lg min-[1681px]:text-xl'>Gaming</span>
+              <span className=' max-[1000px]:text-base max-[1680px]:text-lg min-[1681px]:text-xl'>Gaming</span>
             </div>
           </div>
           <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
             <div className='flex items-center'>
-              <span className='max-[1680px]:text-lg min-[1681px]:text-xl'>Listening Music</span>
+              <span className=' max-[1000px]:text-base max-[1680px]:text-lg min-[1681px]:text-xl'>Listening Music</span>
             </div>
           </div>
           <div className='bg-white bg-opacity-70 rounded-xl max-[1680px]:px-6 max-[1680px]:py-3 min-[1681px]:px-8 min-[1681px]:py-4 text-black font-extrabold max-[1680px]:mt-2 min-[1681px]:mt-3'>
             <div className='flex items-center'>
-              <span className='max-[1680px]:text-lg min-[1681px]:text-xl'>Watching Anime</span>
+              <span className=' max-[1000px]:text-base max-[1680px]:text-lg min-[1681px]:text-xl'>Watching Anime</span>
             </div>
           </div>
         </div>
