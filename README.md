@@ -29,4 +29,4 @@ Target:
 - [x] Create General Page
 
 - [X] FHD Responsive Design
-- [ ] Mobile Responsive Design
+- [X] Mobile Responsive Design
