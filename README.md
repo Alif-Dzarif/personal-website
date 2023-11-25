@@ -1,30 +1,9 @@
 # Personal Website
 
 ## Deployment Link
-```
-<html>
-<style>
-  .myButton {
-    background-color: #0377fc;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .myButton:hover {
-    background-color: #014591;
-  }
-</style>
-
 <a href="https://alif-dzarif-personal-web-3b7e5.web.app/" target="_blank">
-  <button class="myButton">My Personal Website</button>
+  <button style="background-color:#0377fc; color:white; border:none; padding:8px 16px; font-weight:bold; border-radius: 5px; cursor: pointer;">My Personal Website</button>
 </a>
-</html>
-```
 
 &nbsp;
 
