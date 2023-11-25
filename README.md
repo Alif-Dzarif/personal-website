@@ -1,7 +1,7 @@
 # Personal Website
 
 ## Deployment Link
-<a href="https://alif-dzarif-personal-web-3b7e5.web.app/">
+<a href="https://alif-dzarif-personal-web-3b7e5.web.app/" target="blank">
 <button>My Personal Website</button>
 </a>
 
