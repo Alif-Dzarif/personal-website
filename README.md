@@ -2,7 +2,7 @@
 
 ## Deployment Link
 <a href="https://alif-dzarif-personal-web-3b7e5.web.app/" target="_blank">
-  <button style="background-color:#0377fc; color:white; border:none; padding:8px 16px; font-weight:bold; border-radius: 5px; cursor: pointer;">My Personal Website</button>
+  My Personal Website
 </a>
 
 &nbsp;
